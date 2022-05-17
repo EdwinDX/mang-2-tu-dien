@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển Anh-Việt</title>
+</head>
+<body>
+<input type="text" id="inputEng" placeholder="Nhập từ tiếng Anh">
+<button id="btn" onclick="doTranslate()">Tìm kiếm</button>
+<p id="show"></p>
+<script>
+    let arrEng = ['cat','dog','lion','tiger'];
+    let arrVie = ['mèo','chó','sư tử','hổ'];
+    function doTranslate() {
+        let a = document.getElementById('inputEng').value.toString();
+        let pos = arrEng.indexOf(a);
+        document.getElementById('show').innerHTML = arrVie[pos];
+    }
+</script>
+</body>
+</html>
